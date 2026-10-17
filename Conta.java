@@ -9,6 +9,7 @@ public class Conta {
     }
 
     public void setSaldo(float saldo) {
+
         this.saldo = saldo;
 
     }
@@ -17,8 +18,15 @@ public class Conta {
         return saldo;
     }
 
-    public void takeSaldo(float Saldo) {
-        this.saldo -= saldo;
+    public void takeSaldo(float saldo) {
+        if (saldo > this.saldo ){
+             System.out.println("Saldo insuficiente.");
+        }
+
+        else {
+           this.saldo -= saldo;
+        }
+        
     }
 
 }
